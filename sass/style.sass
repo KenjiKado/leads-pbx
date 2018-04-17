@@ -1,0 +1,421 @@
+@import compass/reset
+@import compass/css3
+@import compass/layout
+@import compass/typography
+@import compass/utilities
+
+
+// CONFIG
+$base-font-size: 16px !global
+$base-line-height: 24px !global
++establish-baseline
+
+// IMPORT
+
+// COLORS
+$green: #31c164
+
+// FONTS
++font-face("OpenSans", font-files("OpenSans/OpenSans.eot", "OpenSans/OpenSans.ttf", "OpenSans/OpenSans.svg", "OpenSans/OpenSans.woff"))
++font-face("OpenSans-Bold", font-files("OpenSans-Bold/OpenSans-Bold.eot", "OpenSans-Bold/OpenSans-Bold.ttf", "OpenSans-Bold/OpenSans-Bold.svg", "OpenSans-Bold/OpenSans-Bold.woff"))
++font-face("OpenSans-Italic", font-files("OpenSans-Italic/OpenSans-Italic.eot", "OpenSans-Italic/OpenSans-Italic.ttf", "OpenSans-Italic/OpenSans-Italic.svg", "OpenSans-Italic/OpenSans-Italic.woff"))
++font-face("FiraSans", font-files("FiraSansRegular/FiraSansRegular.eot", "FiraSansRegular/FiraSansRegular.ttf", "FiraSansRegular/FiraSansRegular.woff"))
++font-face("FiraSans-Bold", font-files("FiraSansBold/FiraSansBold.eot", "FiraSansBold/FiraSansBold.ttf", "FiraSansBold/FiraSansBold.woff"))
+
+h2
+	font-family: OpenSans-Bold, sans-serif
+	text-transform: uppercase
+	+adjust-font-size-to(30px)
+	color: #596169
+strong, b 
+	font-family: OpenSans-Bold, sans-serif
+
+//GRID
+$w: (100%/12)
+.container
+	max-width: 960px
+	margin: 0 auto
+.row
+	padding: 0 10px	
+.col	
+	display: inline-block
+	white-space: normal
+	margin: -3px auto
+	padding: 0 10px
+.col-block
+	display: block	
+.col-1
+	width: $w*1
+.col-2
+	width: $w*2
+.col-3
+	width: $w*3
+.col-4
+	width: $w*4
+.col-5
+	width: $w*5
+.col-6
+	width: $w*6
+.col-7
+	width: $w*7	
+.col-8
+	width: $w*8
+.col-9
+	width: $w*9
+.col-10
+	width: $w*10
+.col-11
+	width: $w*11
+.col-12
+	width: $w*12
+
+// BTNS
+button
+	cursor: pointer
+	border: 0
+	background-color: transparent
+	outline: none
+.btn 	
+	display: block
+	text-align: center
+.green-btn
+	height: 60px
+	width: 100%
+	background-color: $green
+	+adjust-font-size-to(14px)
+	line-height: 60px
+	color: #FFF
+	&:hover
+		background-color: #27964f
+
+
+// ICONS
+i
+	+inline-block
+	font-family: OpenSans-Italic, sans-serif
+	background-repeat: no-repeat
+.mouse-i
+	display: block
+	width: 62px
+	height: 62px
+	margin: 0 auto
+	background-image: url("../img/icons/mouse-i.png")
+	background-repeat: no-repeat
+	background-position: center
+.phone-i
+	display: inline-block
+	margin-top: 0px
+	margin-right: 6px
+	vertical-align: top
+	width: 11px
+	height: 11px
+	background-image: url("../img/icons/phone_i.png")
+.arrow-right
+	display: inline-block
+	min-width: 44px
+	height: 18px
+	padding: 15px 0 0
+	vertical-align: middle
+	background-image: url("../img/icons/rigth-row.png")
+	background-position: center
+	background-repeat: no-repeat
+.two-arrow
+	display: inline-block
+	min-width: 50px
+	max-width: 80px
+	height: 18px
+	padding: 25px 0 0
+	vertical-align: middle
+	background-image: url("../img/icons/two-row.png")
+	background-position: center
+	background-repeat: no-repeat
+.mail-i
+	display: inline-block
+	width: 15px
+	height: 11px
+	margin-right: 5px
+	background-image: url("../img/icons/mail.png")
+	background-repeat: no-repeat
+.vk-i
+	display: inline-block
+	width: 15px
+	height: 13px
+	margin-right: 5px
+	background-image: url("../img/icons/vk.png")
+	background-repeat: no-repeat
+
+
+// STYLE
+html
+	+box-sizing(border-box)
+*, *:before, *:after 
+	box-sizing: inherit
+html, body, #wrapper
+	height: 100%
+body
+	min-width: 960px
+	max-width: 1920px
+	margin: 0 auto
+	font-family: OpenSans, sans-serif
+a, button, input, select, option, textarea
+	outline: none
+	border: 0
+input[type='checkbox']
+	margin: 0
+a img
+	border: 0	
+a
+	text-decoration: none
+	cursor: pointer
+.grid-block
+	display: block
+	margin: 0 auto		
+header 
+	.informer-s
+		background: url("../img/header-bg.png") no-repeat
+		width: 100%	
+		height: 930px
+		text-align: center
+		color: #FFF
+		.top-section
+			padding: 270px 0 10px 0
+			.logo
+				margin: 0 auto
+			.col
+				padding: 50px 0 20px
+				display: block
+				p
+					+adjust-font-size-to(15px)
+			.green-btn
+				margin: 0 0 80px
+		.how-it-work
+			p
+				padding: 15px 0
+				+adjust-font-size-to(13px)	
+				text-align: center	
+	.system-s
+		background-color: #252e38
+		vertical-align: middle	
+		.row
+			vertical-align: top	
+			height: 100px
+			.col
+				display: table-cell
+				height: 100px
+				vertical-align: middle
+				line-height: 1em
+				p
+					+adjust-font-size-to(13px)
+					color: #8b9096
+					line-height: 16px	
+				.head-phone
+					display: block
+					text-align: right
+					color: #FFF	
+					+adjust-font-size-to(25px)
+					line-height: 34px
+				.callback
+					display: block
+					+adjust-font-size-to(13px)
+					line-height: 1em
+					color: $green	
+					text-align: right 	
+
+.content
+	.content-s
+		padding: 160px 0 80px
+		&:nth-child(odd)
+			background-color: #FFF
+		&:nth-child(even)
+			background-color: #EEE 
+		h2
+			display: block
+			margin-bottom: 130px
+			text-align: center	
+		.test-period-info
+			margin: 40px auto	
+		p
+			text-align: center
+			+adjust-font-size-to(13px)
+			color: #596169
+			b 
+				font-family: OpenSans-Bold, sans-serif
+				color: $green					
+		.items-block
+			.col
+				vertical-align: top
+				margin: 20px -3px 80px
+				.img
+					display: inline-block
+					width: 20%
+					vertical-align: top
+				img
+					vertical-align: top
+				>p
+					display: inline-block
+					width: 70%	
+					+adjust-font-size-to(13px)
+					color: #596169
+					text-align: left
+					padding: 0 20px
+					b 
+						color: #596169
+				.is-one-account
+					width: 100%
+					padding: 24px 0
+					border: 2px solid #eee
+					text-align: center
+					color: #596169
+					p
+						display: inline
+						+adjust-font-size-to(13px)
+					span
+						display: inline
+						color: $green
+						+adjust-font-size-to(30px)
+		.system-interaction
+			.system-shematic
+				text-align: center	
+				margin: 0 0 120px		
+				.one-block
+					display: inline-block
+					height: 140px
+					position: relative
+					vertical-align: top
+					padding: 0
+					color: #6c7c8c
+					.action
+						display: table-cell
+						vertical-align: top
+						padding: 0
+						+adjust-font-size-to(14px)
+						img
+							margin-bottom: 20px
+						i
+							display: block
+					.arrow
+						display: table-cell	
+						vertical-align: top
+						padding: 40px 0
+						i
+							display: block
+							+adjust-font-size-to(13px)
+					strong
+						display: block
+						text-transform: uppercase		
+			.col
+				display: block
+				margin: 0 auto
+	.prices-block
+		max-height: 530px
+		background-image: url("../img/price-bg.png")
+		background-repeat: no-repeat
+		width: 100%	
+		text-align: center
+		color: #FFF
+		padding: 100px 0
+		h2
+			color: #FFF
+			margin-bottom: 40px
+		.prices
+			text-transform: uppercase	
+			b 
+				color: $green
+			.account-price
+				border: 4px solid rgba($green, .5)
+				padding: 20px 0
+				margin: 30px 0 75px
+	.payment-methods
+		padding: 100px 0
+		text-align: center
+		.methods
+			margin: 80px 0 20px
+			a
+				display: inline-block
+				height: 80px
+				margin: 0 40px
+				vertical-align: middle
+				background-position: 0 0
+				background-repeat: no-repeat
+				&:hover
+					background-position: 0 100% 
+			.method-sberbank
+				width: 220px
+				height: 39px
+				background-image: url("../img/icons/sberbank.png")
+			.method-qiwi
+				width: 180px
+				height: 67px
+				background-image: url("../img/icons/qiwi.png")
+			.method-plati
+				width: 140px
+				height: 63px
+				background-image: url("../img/icons/plati.png")	
+footer
+	background-color: #252e38
+	.container
+		.row
+			height: 100px
+			vertical-align: middle
+			.col
+				display: table-cell
+				height: 100px
+				padding: 0 20px
+				vertical-align: middle
+				line-height: 1em
+				.address-block
+					text-align: right
+					+adjust-font-size-to(13px)
+					i
+						color: #FFF
+					p
+						color: #737d88	
+				a
+					display: block
+					+adjust-font-size-to(13px)
+					color: #FFF	
+/*MODAL*/
+.modal
+	display: none
+.fancybox-type-inline 
+	width: ($w*3) !important
+	.fancybox-skin
+		border-radius: 0
+		.fancybox-inner
+			width: 100% !important
+			.modal
+				padding: 65px 80px
+				.title-m
+					width: 80%
+					margin: 0 auto
+					h3
+						font-family: OpenSans-Bold, sans-serif
+						text-transform: uppercase
+						text-align: center
+						+adjust-font-size-to(24px)
+						line-height: 28px
+						color: #596169
+						margin-bottom: 60px
+				form
+					input[type=text]
+						width: 100%
+						height: 55px
+						padding: 0 20px
+						margin: 0 0 20px
+						font-family: OpenSans-Italic, sans-serif
+						color: #596169
+						+adjust-font-size-to(14px)
+						line-height: 55px
+						background-color: #f1f1f1	
+						@include input-placeholder
+							font-family: OpenSans-Italic, sans-serif
+							color: #596169
+					.btn
+						margin-top: 30px	
+		.fancybox-close
+			top: 20px !important
+			right: 20px !important
+			width: 17px
+			height: 17px
+			background-image: url("../img/icons/close.png")		
+

@@ -1,0 +1,24 @@
+{
+  "name": "charterbus",
+  "authors": [
+    "ogarich89 <r.ogarkov@writex.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.0",
+    "jquery-form-styler": "jquery.form-styler#^1.7.6",
+    "datetimepicker": "^2.5.4",
+    "jquery.maskedinput": "^1.4.1"
+  }
+}
